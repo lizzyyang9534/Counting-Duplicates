@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Counting_Duplicates
 {
@@ -13,18 +15,40 @@ namespace Counting_Duplicates
             //"Indivisibilities" -> 2 # 'i' occurs seven times and 's' occurs twice
             //"aA11" -> 2 # 'a' and '1'
             //"ABBA" -> 2 # 'A' and 'B' each occur twice
-            string a = "abcde";
-            Console.WriteLine(CountingDuplicates(a));
+            string a = "Aabbcde";
+            CountingDuplicates(a);
         }
 
-        private static string CountingDuplicates(string s)
+        private static void CountingDuplicates(string s)
         {
-            string result = string.Empty;
-            foreach (var c in result)
+            var resultDictionary = new Dictionary<char, int>();
+            foreach (var c in s)
             {
-                
+                if (resultDictionary.ContainsKey(c))
+                    resultDictionary[c] += 1;
+                else
+                    resultDictionary.Add(c, 1);
             }
-            return result;
+            PrintResultInConsole(resultDictionary);
+        }
+
+        private static void PrintResultInConsole(Dictionary<char, int> resultDictionary)
+        {
+            var total = "total";
+            Console.Write(total + " # ");
+
+            if (resultDictionary.Values.Max() < 2)
+            {
+                Console.Write("no characters repeats more than once");
+            }
+
+            foreach (var result in resultDictionary)
+            {
+                if (result.Value > 1)
+                {
+                    Console.Write("'" + result.Key + "' occurs " + result.Value + " times. ");
+                }
+            }
         }
     }
 }

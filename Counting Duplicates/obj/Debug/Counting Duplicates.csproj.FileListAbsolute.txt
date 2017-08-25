@@ -1,1 +1,6 @@
 D:\practice\Counting Duplicates\Counting Duplicates\bin\Debug\Counting Duplicates.exe.config
+D:\practice\Counting Duplicates\Counting Duplicates\bin\Debug\Counting Duplicates.exe
+D:\practice\Counting Duplicates\Counting Duplicates\bin\Debug\Counting Duplicates.pdb
+D:\practice\Counting Duplicates\Counting Duplicates\obj\Debug\Counting Duplicates.csprojResolveAssemblyReference.cache
+D:\practice\Counting Duplicates\Counting Duplicates\obj\Debug\Counting Duplicates.exe
+D:\practice\Counting Duplicates\Counting Duplicates\obj\Debug\Counting Duplicates.pdb
